@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ListItem from './ListItem';
+import ToDoList from './ToDoList';
 
 class MyList extends Component {
   constructor(props) {
@@ -50,16 +50,14 @@ class MyList extends Component {
   }
 
   render() {
-    const allTasks = this.state.toDoItems.map((task, index) => {
-      return <ListItem task={task} key={index} />;
-    });
+    // const allTasks = this.state.toDoItems.map((task, index) => {
+    //   return <ListItem task={task} key={index} />;
+    // });
 
     return (
       <div>
         <h1>Things I should stop procrastinating:</h1>
-        <ul>
-          {allTasks}
-        </ul>
+        <ToDoList todoItems={this.state.toDoItems} />
         <br />
         
         <form>
