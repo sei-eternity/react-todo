@@ -3,7 +3,7 @@ import ToDoList from './ToDoList';
 
 class MyList extends Component {
   constructor(props) {
-    super();
+    super(props);
 
     this.state = {
       toDoItems: props.theList,
